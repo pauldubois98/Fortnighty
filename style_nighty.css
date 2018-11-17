@@ -5,7 +5,7 @@
 }
 
 #all {width: 85%;
-background-color: white;
+background-color: rgba(255, 255, 255,0.85);
 margin: auto;}
 
 body {background-color: black;}
@@ -28,19 +28,21 @@ padding-top: 40px;
 
 .blue {color: blue;}
 
+
 .img1 img{position: absolute;
-    left: 180px;
+    left: 20%;
     top: 20px;
-    width: 200px;
+    width: 250px;
     height: 230px;
 }
 
 .img2 img{position: absolute;
-    right: 180px;
-    top: 20px;
-    width: 200px;
+    right: 15%;
+    top: 23px;
+    width: 250px;
     height: 230px;}
 
+    
 #flex_container {
   display: flex;
   justify-content: space-evenly;}
@@ -49,9 +51,34 @@ padding-top: 40px;
     letter-spacing: 5px;
     font-size: 25px;
     font-weight: bold;
+    color: blue;
 }
 
-#flex_container div {background-color: rgb(174, 174, 174);
+#flex_container .pulseit{ background: linear-gradient(rgb(137, 6, 6),red);
+  border: 3px solid black;
+  border-radius: 80px;
+  color: white;
+  display: inline-block;
+  margin: -5px;
+  padding: 10px;
+  font-size: 12px;
+  height: 10px;
+  text-decoration: none;
+    -webkit-animation: pulse linear .5s infinite;
+	animation: pulse linear .5s infinite;
+}
+@-webkit-keyframes pulse {
+	0% { width:100px; } 
+	50% { width:200px; } 
+	100% { width:100px; }
+}
+@keyframes pulse {
+	0% { width:100px; } 
+	50% { width:200px; } 
+	100% { width:100px; }
+}
+
+#flex_container div {background-color: rgb(147, 145, 145);
     border:  4px solid black;
     padding: 4px;
     flex: auto;
@@ -64,6 +91,13 @@ padding-top: 40px;
     text-align: left;
     width: 1200px;
     margin: 0 auto;
+}
+
+#main {width: 75%;
+margin: auto;}
+
+#main .subhead {font-size: 20px;
+    font-weight: bold;
 }
 
 #box {background-color:rgba(181, 171, 171);
@@ -111,5 +145,39 @@ color: black;
     font-weight: bold;
 position: absolute;}
 
-#exit a{text-decoration: none; color: black;}
+#exit a{text-decoration: none;
+     color: black;
+    }
 
+#forums .textbox1 {background-color: white;
+padding: 0.6%;
+border: 2px solid black;
+width: 89%;
+}
+
+#forums .textbox2 {background-color: white;
+padding: 2px;
+border: 2px solid black;
+width: 90%;
+height: 150px;}
+
+fieldset {width: 80%;}
+
+.share {
+  border: 1px solid LightGrey;
+  padding: 40px 0px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.share a {
+  background: linear-gradient(rgb(137, 6, 6),red);
+  border: 3px solid black;
+  border-radius: 80px;
+  color: white;
+  display: inline-block;
+  margin: 30px;
+  padding: 14px;
+  text-decoration: none;
+}
