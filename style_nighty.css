@@ -1,0 +1,115 @@
+#game{
+    width: 25em;
+    height: 20em;
+    border:1px solid #000000;
+}
+
+#all {width: 85%;
+background-color: white;
+margin: auto;}
+
+body {background-color: black;}
+
+.heading {background-color:lightblue;
+height: 230px;
+text-align: center;
+padding-top: 40px;
+}
+
+.heading h1 {font-style: italic;
+    font-size: 70px;
+}
+
+.red {color: red;}
+
+.yellow {color: yellow;}
+
+.green {color: green;}
+
+.blue {color: blue;}
+
+.img1 img{position: absolute;
+    left: 180px;
+    top: 20px;
+    width: 200px;
+    height: 230px;
+}
+
+.img2 img{position: absolute;
+    right: 180px;
+    top: 20px;
+    width: 200px;
+    height: 230px;}
+
+#flex_container {
+  display: flex;
+  justify-content: space-evenly;}
+
+#flex_container a {text-decoration: none;
+    letter-spacing: 5px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#flex_container div {background-color: rgb(174, 174, 174);
+    border:  4px solid black;
+    padding: 4px;
+    flex: auto;
+    display: block;
+    text-align: center;
+    padding: 8px;}
+
+#home, #forums, #play, #help, #donate{
+    padding: 0px;
+    text-align: left;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#box {background-color:rgba(181, 171, 171);
+    display: none;
+    position: fixed;
+    left: 35% ;
+    top: 200px;
+    width: 30%;
+    height: 250px;
+    padding: 30px;
+    font-size: 30px;
+    border: 8px solid black ;
+}
+
+#box h3{text-align: center;
+    font-weight: solid;
+    color: red;
+    font-size: 30px;
+    margin-bottom: -20px;
+}
+
+#box .claim {background-color: rgba(181, 171, 171);
+    border: 2px solid black;
+    top: 30px;
+    left: 30px;
+    width: 80px;
+    padding: 10px; 
+    margin:auto;
+    text-align: center;
+    font-weight: bold;}
+
+
+#box .claim a{text-decoration: none;
+color: black;
+}
+
+#box .exit a{text-decoration:none}
+
+#exit {
+    top: 2%;
+    right: 5%;
+    width: 8px;
+    height: 5px; 
+    text-align: center;
+    font-weight: bold;
+position: absolute;}
+
+#exit a{text-decoration: none; color: black;}
+

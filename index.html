@@ -1,18 +1,64 @@
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang= 'en'>
 <head>
-    <meta charset="utf-8">
-    <title>Fortnighty</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="game.js"></script>
+  <title>Fortnighty</title>
+  <link rel="stylesheet" type="text/css" href="style_nighty.css">
+  <meta charset="utf-8">
+  <title>Fortnighty</title>
+  <script src="game.js"></script>
 </head>
 
 <body>
-    <h1>Fortnighty</h1>
-    
-    <canvas id="game">
-    </canvas>
+    <div id='all'>
+        <div class = 'heading'>
+            <h1><span class  = 'red'>F</span><span class = 'yellow'>O</span><span class = 'green'>R</span><span class = 'blue'>T</span><span class = 'red'>N</span><span class = 'yellow'>I</span><span class = 'green'>T</span><span class = 'blue'>E</span></h1>
+            <div class='img1'>
+                <img src = 'C:\Users\Anmol\Documents\GitHub\Fortnighty\Sprite 2.gif'>   
+            </div> 
+            <div class = 'img2'>
+                <img src = 'C:\Users\Anmol\Documents\GitHub\Fortnighty\Sprite 2 final.gif'>
+            </div>
+        </div>
 
+        <div id="flex_container">
+            
+                <div><a href = "#home">Home</a></div>  
+                <div><a href = "#forums">Forums</a></div>
+                <div><a href = '#play'><strong>PLAY</strong></a></div>
+                <div><a href = '#help'>Help</a></div>
+                <div ><a id = 'button' href = '#donate' >Donate</a></div>
+            
+            </div>
+
+            <div id = 'home'>
+            <h3>Home</h3>
+            </div>
+
+            <div id = 'forums'>
+            <h3>Forums</h3>
+            </div>
+
+            <div id = 'play'> 
+                <h3>Let the game begin</h3>
+                <canvas id="game">
+                </canvas>
+            </div>
+        
+            <div id = 'help'>
+            <h3>Help</h3>
+        
+    </div>
+ 
+    <div id = 'box'>
+        <h3>CONGRATULATIONS!!!!!</h3> 
+        <br>
+        <p>You have won $1,000,000, please enter your bank details to claim it!!!!!</p>
+        <div class = 'claim'><a  href = 'https://www.paypal.com/uk/home' target = '_blank'> Claim </a></div> 
+        <div id = 'exit'><a href = '.\index.html'>x</a></div>
+    </div> 
+
+
+</div>
 </body>
 
-</html>
+<script src="popup.js"></script> 
