@@ -51,6 +51,7 @@ function background() {
 
 function draw() {
   background();
+  setTimeout(function() {}, 5);
   player1();
   player2();
 
