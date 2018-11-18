@@ -1,80 +1,132 @@
 var c=document.getElementById("game");
 var ctx=c.getContext("2d");
-var img = new Image();
-img.src = "Sprite_2_final/Sprite_2-0.png"
+var player1img = new Image();
+var player2img = new Image();
 var backgroundimage = new Image();
 backgroundimage.src = "Background.png"
-//var img=document.getElementById("man");
 
 var h=50;
 var w=20;
-var x=150;
-var y=c.height-h;
+var x1=50;
+var y1=c.height-h-10;
+var life1=true;
+var x2=c.width-50;
+var y2=c.height-h-10;
+var life2=true;
 var step=5;
-var anglestep=Math.PI/6;
-var angle=0;
+var angle1=0;
+var angle2=6;
 var speed=5;
 
-var ennemies = [(100, 50), (800)]
 
 window.onload = function() {
-  background();
-  person();
+  draw();
   document.addEventListener("keydown", key, false);
 };
 
-function person() {
-  //ctx.clearRect(x,y, x+w, y+h);
-  angle=(angle+24)%12;
-  img.src="Sprite_2_final/Sprite_2-"+angle+".png";
-  ctx.drawImage(img,x,y, w, h);
-  console.log("image:"+img.src);
+
+function player1() {
+  if(life1){
+    angle1=(angle1+24)%12;
+    player1img.src="Sprite_1_final/Sprite_1-"+angle1+".png";
+    ctx.drawImage(player1img,x1,y1, w, h);
+  }
 
 }
 
+function player2() {
+  if(life2){
+    angle2=(angle2+24)%12;
+    player2img.src="Sprite_2_final/Sprite_2-"+angle2+".png";
+    ctx.drawImage(player2img,x2,y2, w, h);
+  }
+
+}
+
+
 function background() {
+  ctx.clearRect(0,0, c.width, c.height);
   ctx.drawImage(backgroundimage,0,0, c.width, c.height);
 }
 
+function draw() {
+  background();
+  player1();
+  player2();
+
+}
+
+
 function key(e){
   console.log(e.keyCode);
-  if(e.keyCode == '37' && x+10>0){
-    x=x-step;
-    background();
-    person();
+  //player1
+  if(life1){
+    if(e.keyCode == '74' && x1+10>0){
+      x1=x1-step;
+      draw();
+    }
+    if(e.keyCode == '76' && x1+10<c.width){
+      x1=x1+step;
+      draw();
+    }
+    if(e.keyCode == '73'){
+      angle1 -= 1;
+      draw();
+    }
+    if(e.keyCode == '75'){
+      angle1 +=1;
+      draw();
+    }
+    //shooting
+    if(e.keyCode == '72'){
+      console.log("shoot");
+      shoot(x1+w/2,y1+h/2 ,2, angle1*Math.PI/6,speed,20, true, 0, 10);
+    }
   }
-  if(e.keyCode == '39' && x+10<c.width){
-    x=x+step;
-    background();
-    person();
+
+
+  //palyer2
+  if(life2){
+    if(e.keyCode == '88' && x2+10>0){
+      x2=x2-step;
+      draw();
+    }
+    if(e.keyCode == '86' && x2+10<c.width){
+      x2=x2+step;
+      draw();
+    }
+    if(e.keyCode == '68'){
+      angle2 -= 1;
+      draw();
+    }
+    if(e.keyCode == '67'){
+      angle2 +=1;
+      draw();
+    }
+    //shooting
+    if(e.keyCode == '66'){
+      console.log("shoot");
+      shoot(x2+w/2,y2+h/2 ,2, angle2*Math.PI/6,speed,20, true, 0, 10);
+    }
   }
-  if(e.keyCode == '38' && x+10<c.width){
-    angle -= 1;
-    background();
-    person();
-  }
-  if(e.keyCode == '40' && x+10<c.width){
-    angle+=1;
-    background();
-    person();
-  }
-  if(e.keyCode == '32'){
-    console.log("shoot");
-    shoot(x+w/2,y+h/4,2, angle*Math.PI/6,speed,20, true, 0);
-  }
+
+
+
+
 
 }
 
 
 
-function shoot(posx, posy, r, a, s, time, stillIn, g){
+function shoot(posx, posy, r, a, s, time, stillIn, g, self){
+  //draw background
   background();
-
   //incr
   g+=0.1;
+  self-=1;
+
   posx = posx+Math.cos(a)*s;
   posy = posy+Math.sin(a)*s+g;
-
   //draw a circle
   ctx.beginPath();
   ctx.arc(posx, posy, r, 0, Math.PI*2);
@@ -82,20 +134,32 @@ function shoot(posx, posy, r, a, s, time, stillIn, g){
   ctx.fillStyle = '#000';
   ctx.fill();
 
-  person();
+  player1();
+  player2();
+  //end
+  if( (self<0) && (posx>=x1) && (posx<=(x1+w)) && (posy>=y1) && (posy<=(y1+h)) ){
+    life1=false;
+    stillIn=false;
+    draw();
+  }
+  if ( (self<0) && (posx>=x2) && (posx<=(x2+w)) && (posy>y2) && (posy<(y2+h)) ) {
+    life2=false;
+    stillIn=false;
+    draw();
+  }
 
-
-
-  if(stillIn){
-    if(posx<0 || posx>c.width || posy<0 || posy>c.height){
-      setTimeout(function(){shoot(posx, posy, r, a, s, time, false);}, time);
+  if (stillIn){
+    if(posx<0 || posx>c.width || posy>c.height){
+      setTimeout(function(){shoot(posx, posy, r, a, s, time, false, g, self);}, time);
     }
     else {
-      setTimeout(function(){shoot(posx, posy, r, a, s, time, true, g);}, time);
+      setTimeout(function(){shoot(posx, posy, r, a, s, time, true, g, self);}, time);
     }
   }
   else {
     console.log("end");
   }
-
 }
+
+
+draw();

@@ -1,6 +1,6 @@
 #game{
-    width: 25em;
-    height: 20em;
+    width: 60em;
+    height: 30em;
     border:1px solid #000000;
 }
 
@@ -42,7 +42,7 @@ padding-top: 40px;
     width: 250px;
     height: 230px;}
 
-    
+
 #flex_container {
   display: flex;
   justify-content: space-evenly;}
@@ -68,13 +68,13 @@ padding-top: 40px;
 	animation: pulse linear .5s infinite;
 }
 @-webkit-keyframes pulse {
-	0% { width:100px; } 
-	50% { width:200px; } 
+	0% { width:100px; }
+	50% { width:200px; }
 	100% { width:100px; }
 }
 @keyframes pulse {
-	0% { width:100px; } 
-	50% { width:200px; } 
+	0% { width:100px; }
+	50% { width:200px; }
 	100% { width:100px; }
 }
 
@@ -124,7 +124,7 @@ margin: auto;}
     top: 30px;
     left: 30px;
     width: 80px;
-    padding: 10px; 
+    padding: 10px;
     margin:auto;
     text-align: center;
     font-weight: bold;}
@@ -140,7 +140,7 @@ color: black;
     top: 2%;
     right: 5%;
     width: 8px;
-    height: 5px; 
+    height: 5px;
     text-align: center;
     font-weight: bold;
 position: absolute;}

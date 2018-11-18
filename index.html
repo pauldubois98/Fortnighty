@@ -5,7 +5,6 @@
   <link rel="stylesheet" type="text/css" href="style_nighty.css">
   <meta charset="utf-8">
   <title>Fortnighty</title>
-  <script src="game.js"></script>
 </head>
 
 <body>
@@ -13,21 +12,21 @@
         <div class = 'heading'>
             <h1><span class  = 'red'>F</span><span class = 'yellow'>O</span><span class = 'green'>R</span><span class = 'blue'>T</span><span class = 'red'>N</span><span class = 'yellow'>I</span><span class = 'green'>T</span><span class = 'blue'>E</span></h1>
             <div class='img1'>
-                <img src = 'C:\Users\Anmol\Documents\GitHub\Fortnighty\Gifsp1.gif'>   
-            </div> 
+                <img src = 'Gifsp1.gif'>
+            </div>
             <div class = 'img2'>
-                <img src = 'C:\Users\Anmol\Documents\GitHub\Fortnighty\Gifsp2.gif'>
+                <img src = 'Gifsp2.gif'>
             </div>
         </div>
 
         <div id="flex_container">
-            
-                <div><a href = "#home">Aim</a></div>  
+
+                <div><a href = "#home">Aim</a></div>
                 <div><a href = "#forums">Forums</a></div>
                 <div><a href = '#play' ><div class = 'pulseit'>PLAY</div></a></div>
                 <div><a href = '#help'>Help</a></div>
                 <div ><a id = 'button' href = '#donate' >Donate</a></div>
-            
+
             </div>
             <br>
             <div id = 'main'>
@@ -36,17 +35,17 @@
                 <ul>
                     <li>mdvndkjvndjvndvkjnjvkd</li>
                     <li> nfljdfndjvnedjvjnvjdvn</li>
-                    <li>ojscjcncjnsjnkfndkfnd</li> 
+                    <li>ojscjcncjnsjnkfndkfnd</li>
                 </ul>
                 </div>
 
                 <div id = 'forums'>
-                
+
                 <form action="index.html">
                 <fieldset>
                 <legend class = 'subhead'>Forums</legend>
                     Description: <br>
-                    <input class = 'textbox1' maxlength = '50' type = 'text' name="Description" ></input>   
+                    <input class = 'textbox1' maxlength = '50' type = 'text' name="Description" ></input>
                 <br><br>
                     <input  class = 'textbox2' type = 'text' placeholder="type here.." >
                 <br><br>
@@ -56,25 +55,39 @@
                 </form>
                 </div>
 
-                <div id = 'play'> 
+                <div id = 'play'>
                     <h3 class = 'subhead'>Let the game begin</h3>
                     <canvas id="game">
                     </canvas>
+                    <div><img src="keyExpl.png"  alt="keys explanations"></div>
+                    <div style="display: flex">
+                      <p style="background: white; font-size: 2.5em;">
+                        <span style="color: blue">Player's moves</span><br>
+                        <span style="color: lightblue">Player's angle of shooting</span><br>
+                        <span style="color: green">Player's shooting</span><br>
+                      </p>
+                      <div style="width:5em;"></div>
+                      <p style="background: white; font-size: 2.5em;">
+                        <span style="color: red">Player's moves</span><br>
+                        <span style="color: orange">Player's angle of shooting</span><br>
+                        <span style="color: darkred">Player's shooting</span><br>
+                      </p>
+                    </div>
                 </div>
-            
+
                 <div id = 'help'>
                 <h3 class = 'subhead'>Help</h3>
             </div>
-        
+
     </div>
- 
+
     <div id = 'box'>
-        <h3>CONGRATULATIONS!!!!!</h3> 
+        <h3>CONGRATULATIONS!!!!!</h3>
         <br>
         <p>You have won $1,000,000, click the link below to claim it</p>
-        <div class = 'claim'><a  href = 'https://www.paypal.com/uk/home' target = '_blank'> Claim </a></div> 
+        <div class = 'claim'><a  href = 'https://www.paypal.com/uk/home' target = '_blank'> Claim </a></div>
         <div id = 'exit'><a href = '.\index.html'>x</a></div>
-    </div> 
+    </div>
 
     <div class="share">
     <a href="#">SHARE</a>
@@ -86,4 +99,5 @@
 
 </body>
 
-<script src="popup.js"></script> 
+<script src="popup.js"></script>
+<script src="gamescript.js"></script>
