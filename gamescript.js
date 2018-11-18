@@ -81,7 +81,7 @@ function key(e){
     //shooting
     if(e.key == 'b'){
       console.log("shoot");
-      shoot(x1+w/2,y1+h/2 ,2, angle1*Math.PI/6,speed,20, true, 0, 10);
+      shoot(x1+w/2,y1+h/2 ,2, angle1*Math.PI/6,speed,20, true, 0, 3);
     }
   }
 
