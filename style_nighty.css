@@ -4,9 +4,10 @@
     border:1px solid #000000;
 }
 
-#all {width: 85%;
+#all {width: 73%;
 background-color: rgba(255, 255, 255,0.85);
-margin: auto;}
+margin: auto;
+}
 
 body {background-color: black;}
 
@@ -63,19 +64,20 @@ padding-top: 40px;
   padding: 10px;
   font-size: 12px;
   height: 10px;
+  width: 75%;
   text-decoration: none;
-    -webkit-animation: pulse linear .5s infinite;
-	animation: pulse linear .5s infinite;
+    -webkit-animation: flash linear 1s infinite;
+	animation: flash linear .5s infinite;
 }
-@-webkit-keyframes pulse {
-	0% { width:100px; }
-	50% { width:200px; }
-	100% { width:100px; }
+@-webkit-keyframes flash {
+	0% { background: linear-gradient(rgb(137, 6, 6),red); }
+	50% { background: linear-gradient(rgb(35, 16, 236),rgb(164, 160, 218)); }
+	100% { background: linear-gradient(rgb(137, 6, 6),red); }
 }
-@keyframes pulse {
-	0% { width:100px; }
-	50% { width:200px; }
-	100% { width:100px; }
+@keyframes flash {
+	0% { background: linear-gradient(rgb(137, 6, 6),red); }
+	50% { background: linear-gradient(rgb(35, 16, 236),rgb(164, 160, 218)); }
+	100% { background: linear-gradient(rgb(137, 6, 6),red); }
 }
 
 #flex_container div {background-color: rgb(147, 145, 145);
@@ -93,12 +95,17 @@ padding-top: 40px;
     margin: 0 auto;
 }
 
-#main {width: 75%;
-margin: auto;}
+#main {width: 90%;
+margin: auto;
+}
 
-#main .subhead {font-size: 20px;
+#main .subhead {font-size: 30px;
     font-weight: bold;
 }
+ #info {width: 80%;
+margin-bottom: 2%;
+font-size: 22px;}
+
 
 #box {background-color:rgba(181, 171, 171);
     display: none;
@@ -149,6 +156,54 @@ position: absolute;}
      color: black;
     }
 
+#submit_box {background-color:rgba(181, 171, 171);
+    display: none;
+    position: fixed;
+    left: 35% ;
+    top: 200px;
+    width: 30%;
+    height: 250px;
+    padding: 30px;
+    font-size: 30px;
+    border: 8px solid black ;}
+
+#button1 {background-color: rgba(181, 171, 171);
+ border: 2px solid black;
+    top: 30px;
+    left: 30px;
+    width: 20%;
+    padding: 5px 9px;
+    margin:auto;
+    text-align: center;
+    font-weight: bold; 
+    text-decoration: none;
+    color: black;
+border-radius: 10px;}
+
+
+#share_box {background-color:rgba(181, 171, 171);
+    display: none;
+    position: fixed;
+    left: 35% ;
+    top: 200px;
+    width: 30%;
+    height: 200px;
+    padding: 30px;
+    font-size: 30px;
+    border: 8px solid black ;
+}
+
+#help_box{background-color:rgba(181, 171, 171);
+    display: none;
+    position: fixed;
+    left: 35% ;
+    top: 200px;
+    width: 30%;
+    height: 200px;
+    padding: 30px;
+    font-size: 30px;
+    border: 8px solid black}
+
 #forums .textbox1 {background-color: white;
 padding: 0.6%;
 border: 2px solid black;
@@ -163,12 +218,19 @@ height: 150px;}
 
 fieldset {width: 80%;}
 
+#play {margin-top: 5%;}
+#play .keyboard{position: relative;
+left: 15%;
+}
+#play .keyboard img{width: 50%;}
+
 .share {
   border: 1px solid LightGrey;
   padding: 40px 0px;
   position: relative;
   text-align: center;
   width: 100%;
+
 }
 
 .share a {

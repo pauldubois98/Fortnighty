@@ -1,9 +1,0 @@
-#game{
-    width: 1000px;
-    height: 800px;
-    border:1px solid #000000;
-}
-
-.notDisp{
-  display: none;
-}

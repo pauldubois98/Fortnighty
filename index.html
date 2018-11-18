@@ -24,7 +24,7 @@
                 <div><a href = "#home">Aim</a></div>
                 <div><a href = "#forums">Forums</a></div>
                 <div><a href = '#play' ><div class = 'pulseit'>PLAY</div></a></div>
-                <div><a href = '#help'>Help</a></div>
+                <div><a id = 'button3' href = '#all'>Help</a></div>
                 <div ><a id = 'button' href = '#donate' >Donate</a></div>
 
             </div>
@@ -32,11 +32,7 @@
             <div id = 'main'>
                 <div id = 'home'>
                 <h3 class = 'subhead'>Aim</h3>
-                <ul>
-                    <li>mdvndkjvndjvndvkjnjvkd</li>
-                    <li> nfljdfndjvnedjvjnvjdvn</li>
-                    <li>ojscjcncjnsjnkfndkfnd</li>
-                </ul>
+                <div id = 'info'>The aim of the website is to replicate modern day webpage such as Fortnite, and create their 90's equivalent. We have used HTML/CSS for the webpage development, and used javascript for the mini-game. To find more such websites, click <a href = 'https://greatunihack.devpost.com/submissions/search?utf8=%E2%9C%93&prize_filter%5Bprizes%5D%5B%5D=26220'>here</a> </div>
                 </div>
 
                 <div id = 'forums'>
@@ -47,36 +43,36 @@
                     Description: <br>
                     <input class = 'textbox1' maxlength = '50' type = 'text' name="Description" ></input>
                 <br><br>
-                    <input  class = 'textbox2' type = 'text' placeholder="type here.." >
+                    <input  class = 'textbox2' type = 'text' placeholder="Please let us know your thoughts..." >
                 <br><br>
-                    <input type="submit" value='Submit'> <a href = 'index.html'></a>
+                    <div ><a id = 'button1' href = '#forums'>Submit</a></div> 
+                    
                 </fieldset>
 
                 </form>
                 </div>
 
                 <div id = 'play'>
-                    <h3 class = 'subhead'>Let the game begin</h3>
+                    <h3 class = 'subhead'>Let the multi-player game begin</h3>
                     <canvas id="game">
                     </canvas>
-                    <div><img src="keyExpl.png"  alt="keys explanations"></div>
+                    <div class = 'keyboard'><img src="keyExpl.png"  alt="keys explanations"></div>
                     <div style="display: flex">
                       <p style="background: white; font-size: 2.5em;">
-                        <span style="color: blue">Player's moves</span><br>
-                        <span style="color: lightblue">Player's angle of shooting</span><br>
-                        <span style="color: green">Player's shooting</span><br>
+                        <span style="color: blue; font-size: 30px">Player's moves</span><br>
+                        <span style="color: lightblue; font-size: 30px">Player's angle of shooting</span><br>
+                        <span style="color: green; font-size: 30px">Player's shooting</span><br>
                       </p>
-                      <div style="width:5em;"></div>
+                      <div style="width:18em;"></div>
                       <p style="background: white; font-size: 2.5em;">
-                        <span style="color: red">Player's moves</span><br>
-                        <span style="color: orange">Player's angle of shooting</span><br>
-                        <span style="color: darkred">Player's shooting</span><br>
+                        <span style="color: red; font-size: 30px">Player's moves</span><br>
+                        <span style="color: orange; font-size: 30px">Player's angle of shooting</span><br>
+                        <span style="color: darkred; font-size: 30px">Player's shooting</span><br>
                       </p>
                     </div>
                 </div>
 
                 <div id = 'help'>
-                <h3 class = 'subhead'>Help</h3>
             </div>
 
     </div>
@@ -88,11 +84,23 @@
         <div class = 'claim'><a  href = 'https://www.paypal.com/uk/home' target = '_blank'> Claim </a></div>
         <div id = 'exit'><a href = '.\index.html'>x</a></div>
     </div>
+    <div id = 'submit_box'>
+    <p>Sorry, we could not recieve your request. It seems like you have lost internet connection - make sure you ethernet wire is connected properly.</p>
+    <div id = 'exit'><a href = '.\index.html'>x</a></div>
+    </div> 
 
+    <div id = 'share_box'>
+    <p>Sorry, there are no social medias in the 90's</p>
+    <div id = 'exit'><a href = '.\index.html'>x</a></div>
+    </div> 
+
+    <div id = 'help_box'>
+    <p>Sorry, we do not have 24 hours IT assistance team in 90's</p>
+    <div id = 'exit'><a href = '.\index.html'>x</a></div>
+    </div>
+    
     <div class="share">
-    <a href="#">SHARE</a>
-    <a href="#">FAVORITE</a>
-    <a href="#">READ</a>
+    <a id = 'button2' href="#help">SHARE</a>
   </div>
 
 </div>
