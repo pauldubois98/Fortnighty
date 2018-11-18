@@ -58,27 +58,27 @@ function draw() {
 
 
 function key(e){
-  console.log(e.keyCode);
+  console.log(e.key);
   //player1
   if(life1){
-    if(e.keyCode == '74' && x1+10>0){
+    if(e.key == 'x' && x1+10>0){
       x1=x1-step;
       draw();
     }
-    if(e.keyCode == '76' && x1+10<c.width){
+    if(e.key == 'v' && x1+10<c.width){
       x1=x1+step;
       draw();
     }
-    if(e.keyCode == '73'){
+    if(e.key == 'c'){
       angle1 -= 1;
       draw();
     }
-    if(e.keyCode == '75'){
+    if(e.key == 'd'){
       angle1 +=1;
       draw();
     }
     //shooting
-    if(e.keyCode == '72'){
+    if(e.key == 'b'){
       console.log("shoot");
       shoot(x1+w/2,y1+h/2 ,2, angle1*Math.PI/6,speed,20, true, 0, 10);
     }
@@ -87,24 +87,24 @@ function key(e){
 
   //palyer2
   if(life2){
-    if(e.keyCode == '88' && x2+10>0){
+    if(e.key == 'j' && x2+10>0){
       x2=x2-step;
       draw();
     }
-    if(e.keyCode == '86' && x2+10<c.width){
+    if(e.key == 'l' && x2+10<c.width){
       x2=x2+step;
       draw();
     }
-    if(e.keyCode == '68'){
+    if(e.key == 'k'){
       angle2 -= 1;
       draw();
     }
-    if(e.keyCode == '67'){
+    if(e.key == 'i'){
       angle2 +=1;
       draw();
     }
     //shooting
-    if(e.keyCode == '66'){
+    if(e.key == 'h'){
       console.log("shoot");
       shoot(x2+w/2,y2+h/2 ,2, angle2*Math.PI/6,speed,20, true, 0, 10);
     }
